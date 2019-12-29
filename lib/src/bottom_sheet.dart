@@ -168,13 +168,9 @@ class RubberBottomSheetState extends State<RubberBottomSheet>
             key: _keyPeak,
             child: widget.header,
           );
-    var bottomSheet = Stack(children: <Widget>[
+    var bottomSheet = Column(children: <Widget>[
       peak,
       Container(
-          margin: EdgeInsets.only(
-              top: widget.header != null
-                  ? _keyPeak.currentContext.size.height
-                  : 0),
           child: widget.upperLayer)
     ]);
     var elem;
